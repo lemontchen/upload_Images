@@ -95,7 +95,7 @@
 					html += '	<div class="upload_box">';
 					html += '		<div class="upload_main single_main">';
 
-		            html += '					<input id="fileImage" type="file" size="30" name="fileselect[]" '+multiple+'>';
+		            html += '<input id="fileImage" type="file" size="30" name="fileselect[]" accept="image/jpg,image/jpeg,image/png,image/bmp" '+multiple+'>';
 
 
 		            html += '			<div id="preview" class="upload_preview">';
@@ -159,8 +159,8 @@
 						console.info(file);
 						if (file.size >= 51200000) {
 							alert('您这个"'+ file.name +'"文件大小过大');	
-						}else if(file.type != "image/jpeg") {
-							alert('您这个"'+ file.name +'"格式必须是jpg格式文件');		
+						//}else if(file.type != "image/jpeg") {
+							//alert('您这个"'+ file.name +'"格式必须是jpg格式文件');		
 						}else{
 							// 在这里需要判断当前所有文件中
 							arrFiles.push(file);	
